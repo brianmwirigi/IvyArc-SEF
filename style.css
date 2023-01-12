@@ -9,7 +9,7 @@ height:70px;
 display: flex;
 margin: 5px auto;
 padding:5px 5px;
-align-items: 2;
+align-items:center;
 background-position: center;
 background-size: cover;
 box-sizing: border-box;
@@ -49,7 +49,7 @@ span
 nav {
 
     float: right;
-    list-style-type: style type 2px; ;
+    list-style-type:armenian ;
     margin: 5px auto;
     color: black;
     display: inline;
