@@ -92,6 +92,7 @@ nav ul li a.active{
 
 .containerImage1 
 {
+    height: 80%;
     width: 90%;
     display: grid;
     margin:  1px auto ;
