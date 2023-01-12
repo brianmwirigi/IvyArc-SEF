@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
 }
+
 .header
 {
 justify-content: space-around;
@@ -103,15 +104,12 @@ nav ul li a.active{
 .containerImage2{
     width: 80%;
     height: 80%;
-
     position: 2;
     bottom: 10;
     right: 160px;
     margin: 1px auto;
-   
 
 }
-
 
 
 .containerContent h1{
@@ -132,9 +130,6 @@ nav ul li a.active{
 .containerContent{
     float: left;
     margin: 1px auto;
-
-   
-
 }
 
 footer
