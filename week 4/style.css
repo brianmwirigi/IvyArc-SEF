@@ -51,3 +51,14 @@ nav ul li a.active{
     color: #000;
 
 }
+
+
+
+footer
+{
+    background-color: white;
+    margin: 1px auto;
+    align-items:center;
+    display: inline-block;
+
+}
