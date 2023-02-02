@@ -70,17 +70,11 @@ footer
     /* Makes the container adjust its height to match
     a floated element (they naturally overflow from their container) */
     display: flow-root;
-    /*
-    font-size affects the size of the text
-    text-align affects the horizontal position of the text
-    line-height affects the vertical position of text using
-    a little trick from here:displayhttps://www.tutorialrepublic.com/faq/how-to-align-text-vertically-center-in-a-div-using-css.php.
-    */
     font-size: 50px;
     text-align:center;
-    line-height: 310px;
+    line-height: 50%;
     height: 90%;
-        width: 90%;
+    width: 90%;
     }
 
     .pictures{
