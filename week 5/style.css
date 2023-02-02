@@ -52,8 +52,6 @@ nav ul li a.active{
 
 }
 
-
-
 footer
 {
     background-color: white;
@@ -84,6 +82,7 @@ gallery_items{
     height:310px;
     width:1300px;
     }
+
     .pictures{
     width:500px;
     height:300px;
