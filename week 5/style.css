@@ -62,3 +62,47 @@ footer
     display: inline-block;
 
 }
+
+gallery_items{
+    border: 5px solid lightgreen;
+    margin-left: 2px;
+    margin-right:2px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* Makes the container adjust its height to match
+    a floated element (they naturally overflow from their container) */
+    display:flow-root;
+    /*
+    font-size affects the size of the text
+    text-align affects the horizontal position of the text
+    line-height affects the vertical position of text using
+    a little trick from here:displayhttps://www.tutorialrepublic.com/faq/how-to-align-text-vertically-center-in-a-div-using-css.php.
+    */
+    font-size:50px;
+    text-align:center;
+    line-height: 310px;
+    height:310px;
+    width:1300px;
+    }
+    .pictures{
+    width:500px;
+    height:300px;
+    border-style: double;
+    border-color: grey;
+    border-width: 5px;
+    border-radius: 50px;
+    }
+    #jbl{
+    /* Places the image on the right side of its surrounding container */
+    float:right;
+    }
+    #mast{
+    /* Places the image on the left side of its surrounding container */
+    float:left;
+    }
+
+    #bamboo{
+        /* Places the image on the right side of its surrounding container */
+        float:right;
+        }
+    
