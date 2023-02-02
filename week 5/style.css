@@ -90,6 +90,7 @@ footer
     /* Places the image on the right side of its surrounding container */
     float:right;
     }
+
     #mast{
     /* Places the image on the left side of its surrounding container */
     float:left;
@@ -97,6 +98,6 @@ footer
 
     #bamboo{
         /* Places the image on the right side of its surrounding container */
-        float:right;
-    
+        float: right;
+        }
     
