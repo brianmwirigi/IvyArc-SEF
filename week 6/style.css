@@ -59,3 +59,74 @@ footer {
     display: inline-block;
 
 }
+#profileCard {
+    border-style: solid;
+    height: 500px;
+    width: 300px;
+    display: grid;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px 2px darkblue;
+    margin: auto;
+
+}
+
+#auto {
+    overflow: auto;
+    width: 200px;
+    height: 200px;
+    content: "Brian mwirigi";
+    display: block;
+    margin: auto;
+
+}
+
+#auto::before {
+    content: "Brian mwirigi";
+    font-size: medium;
+    font-weight: bolder;
+    color: black;
+    width: 125px;
+    height: 30px;
+    background-size: 150px 30px;
+    display: block;
+    text-align: center;
+    border: red;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-style: solid;
+}
+
+
+#me {
+    width: 150px;
+    height: 150px;
+    border-color: orange;
+    border-radius: 50%;
+    border-color: aquamarine;
+    border-style: solid;
+    margin: auto;
+}
+
+#project,
+#research,
+#software {
+
+    font-weight: bolder;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#project:hover {
+    font-weight: bold;
+    font-family: lucida;
+}
+
+#research:hover {
+    font-weight: bold;
+    font-family: lucida;
+}
+
+#software:hover {
+    font-weight: bold;
+    font-family: lucida;
+}
