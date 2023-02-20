@@ -104,6 +104,15 @@ nav ul li a.active {
     background-color: rgba(105, 117, 95, 0.7);
     color: red;
 }
+#auto {
+    overflow: auto;
+    width: 200px;
+    height: 200px;
+    content: "Brian mwirigi";
+    display: block;
+    margin: auto;
+
+}
 @supports (display:flex) {
 
     @media only screen and (min-width: 80px) {
