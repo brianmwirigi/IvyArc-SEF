@@ -118,7 +118,7 @@ nav ul li a.active {
     @media only screen and (min-width: 80px) {
 
         .grid_container {
-            display: flex;
+            display: grid;
             row-gap: 10px;
             column-gap: 15px;
             justify-content: space-evenly;
