@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./style.css">
-    
+    <script type="text/JavaScript" src="week8.js" defer></script>
     <title>HTML, CSS & Javascript </title>
 </head>
-
 <body>
     <div class="header">
         <header>
@@ -22,16 +21,15 @@
         </nav>
     </div>
     <hr />
-    <div class="container-grid">
+    <div class="calculator-grid">
         <div class="output">
             <div data-previous-operand class="previous-operand"></div>
             <div data-current-operand class="current-operand"></div>
         </div>
-        <input type="text" id="inputtext" placeholder="0">
-        <button data-all-clear>AC</button>
+        <!--<input type="text" id="inputtext" placeholder="0"> -->
+        <button data-all-clear class="span-two">AC</button>
         <button data-delete>DEL</button>
-        <button data-operation>%</button>
-        <button data-operation>/</button>
+        <button data-operation>÷</button>
         <button data-number>1</button>
         <button data-number>2</button>
         <button data-number>3</button>
@@ -46,9 +44,9 @@
         <button data-operation>-</button>
         <button data-number>.</button>
         <button data-number>0</button>
-        <button data-equals>=</button>
+        <button data-equals class="span-two">=</button>
     </div>
-    <script type="text/JavaScript" src="week8.js" defer></script>
+    
 </body>
 
 </html>
