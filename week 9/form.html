@@ -62,17 +62,20 @@
 
         <h1> Student Registration Form for software engineering course</h1>
 
+        <!-- Input (Type - First Name)-->
         <label for="first_name">First Name:</label>
         <input type="text" name="first_name" id="first_name" placeholder="First Name"
             style="border-style:solid; border-color:#c46efa; padding:5px;" required/>
             <p id="firstname-error"> Please enter a valid name </p>
         <br /><br />
 
+        <!-- Input (Type - Last Name)-->
         <label for="last_name">Last Name:</label>
         <input type="text" name="last_name" id="last_name" placeholder="Last Name"
             style="border-style:solid; border-color:#c46efa; padding:5px;" required/>
         <br /><br />
 
+        <!-- Input (Type - Phone Number)-->
         <label for="phone_number">Phone Number:</label>
         <input type="text" name="phone_number" id="phone_number" placeholder="Phone Number"
             style="border-style:solid; border-color:#c46efa; padding:5px;" required/>
@@ -104,6 +107,7 @@
         <br />
         <br>
 
+        <!-- Select and Option ( table List)-->
         <label for="favouriteseason">Choose season:</label>
         <select id="favouriteseason">
             <option value="summer"> Summer </option>
@@ -157,15 +161,15 @@
         <label for="WhyUs?">Why did you choose our course?</label>
         <br>
         <textarea id="whyUs?" rows="5" cols="45" placeholder="Why choose us?"
-            style="border-style:solid; border-color:#c46efa; padding:5px;"></textarea>
-        <br /><br />
-        <input type="submit" value="Submit" style="border-style:solid; border-color:#c46efa; border-radius:25px;
-padding:5px;">
+            style="border-style:solid; border-color:#c46efa; padding:5px;">
+        </textarea><br /><br />
+        
+        <!--buttons-->
+        <input type="submit" value="Submit" style="border-style:solid; border-color:#c46efa; border-radius:25px; padding:5px;">
         &nbsp;
         <input type="reset" value="cleartheform" name="reset">
         &nbsp;
-        <!-- Not working now as there is no event listener
-Will be expanded more in the JavaScript modules-->
+        <!-- Not working now as there is no event listener Will be expanded more in the JavaScript modules-->
         <input type="button" value="Cancel" style="border-style:solid; border-color:#c46efa; border-radius:25px;
 padding:5px;">
     </form>
