@@ -70,11 +70,10 @@ const z = 19;
 
 {
     //constructor creates an object that uses a method arguments as th regEx input
-
     const regEx2 = new RegExp("apple1");
 
     function regExpTester(testText) {
-        var regEx = /apple1/;
+        var regEx = /apple1/; //letral
         if (regEx.test(testText) == true) {
             return "this pattern (" + regEx + ") is found in the text pattern (" + testText + ") <br/>";
         } else {
@@ -86,7 +85,36 @@ const z = 19;
     console.log(regExpTester("'The password is apple1'"));
 }
 
-//quantifiees
+//search
+let a = 'monday';
+let b = a.search("day");
+let c = a.search(/day/i);
+
+//replace
+let d = a.replace(/mon/i, 'fri');
+
+//test
+let e = /day/i.test(a);
+let f = /days/i.test(a);
+
+//execute a section 
+let g = /day/i.exec(a);
+
+//more practice
+let h = "'Today's date is 3rd Match 2023"
+let hh = "Today's date is 3rd Match 2023"
+let i = /[a-zA-Z0-9]/i.test(h);
+let ii = /[a-zA-Z0-9]/i.test(hh);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
+console.log(f);
+console.log(g);
+console.log(i);
+console.log(ii);
+
+//quantifiers
 /**
  * are special characters when combined with typical RexEx patterns
  * one can define what number of characters they wish to have or not have in the pattern
