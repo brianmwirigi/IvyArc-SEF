@@ -169,4 +169,5 @@ class Boeing747 extends Vehicles {
     }
 }
 let boeing747 = new Boeing747(76, 25, 64, 19.8, "boeing", 747, 600)
+console.log(boeing747);
 console.log(boeing747.stateDetails());
