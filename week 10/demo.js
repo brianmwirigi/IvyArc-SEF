@@ -26,7 +26,7 @@
  * enables editing of javascript class create and store its methods
  * it is required in creating objects from classes
  * jin javascript, constructors are not explicitly named (even though it is a function)
- * constructor - (keyword) is used
+ * constructor - (keyword) is used in classes
  * later called using the new - (keyword) and class name 
  * 
  */
@@ -36,14 +36,54 @@
 const car = {
     brand: 'toyota',
     year: 2008,
+    receipt: function () { //methods for an object
+        return 'youve bought a ' + this.brand + "  " + this.year + " for 2 million"
+    },
 }
 
 console.log(car.brand); //access properties stored in key : value pair
 console.log(car["brand"]); //access properties stored in key : value pair
+console.log(car.receipt());
 
+//constructor of object
+function Car(brand, year) {
+    this.brand = brand;
+    this.year = year;
+}
+const brian = new Car("mercedes", 2002); //instance of object
+const john = new Car("toyota", 2022);
+
+console.log(brian.brand);
+
+//adding new property to an object
+brian.color = 'blue';
+
+console.log(brian.color);
+
+Car.country = 'germany'; //output error...must be declared in the constructor
+
+console.log(brian.country); //undefined
+
+//built in javascript constructors that can be used to create objecs
+new String();
+new Number()
+new Date();
+new Boolean()
+new Object();
+new Array();
+new RegExp();
+new Function();
+
+const date = new Date();
+console.log(date);
+
+
+//methods for an objects
 //first letter of a class name must be uppercase
 //classes are variables
 //advisable to use const when declaring variables
+
+
 class CarDetails {
     //class properties
     bodyColor;
@@ -51,7 +91,7 @@ class CarDetails {
     bodyHeight;
     bodyLength;
 
-    //method that is a constructor for CarDetails class
+    //method that is a constructor for CarDetails class with properties
     constructor(bodyColor, bodyHeight, bodyLength, bodyWidth) {
         //the variables below, the 'this' keyword is used to refer to the object the constructor is creating
         //the code below informs the computer that when the constructor is called and arguments initialized, the values should be passed on the class properties serving as the new valuu
@@ -61,8 +101,15 @@ class CarDetails {
         this.bodyLength = bodyLength;
         this.bodyWidth = bodyWidth;
     }
-
+    receipt() {
+        return "The cars color is " + this.bodyColor + " with the following height " + this.bodyHeight
+    }
 }
+let kevin = new CarDetails('blue', 44, 66, 22);
+
+console.log(kevin)
+console.log(kevin.receipt());
+
 
 //object of carFactory class is created using its constructor 
 class CarFactory {
@@ -76,7 +123,7 @@ class CarFactory {
         let newCar = new CarDetails("Red", "220cm", "145cm", "350cm")
         let adminMessage = "the car should have the following deatils: " + " Body Color - " + newCar.bodyColor + " " + " Body Height - " + newCar.bodyHeight + " " + " Body Length - " + newCar.bodyLength + " " + " Body Width - " + newCar.bodyWidth;
 
-        return adminMessage;
+        return adminMessage
     }
 }
 
@@ -102,7 +149,7 @@ class Vehicles {
 //will access and utilize the properties of its parent class whilst using some properties specific to it
 class Boeing747 extends Vehicles {
     constructor(length, breadth, height, brand, model, passengerCount) {
-        //the same was 'this' keyword is used when refering to an object we are working with, 'super' ketyword refers to the parent object of the focused one
+        //the same was 'this' keyword is used when refering to an object we are working with, 'super' keyword refers to the parent object of the focused one
         //therefore the length, height and breath are given to the constructor of the Boeing747 class are passed a s arguments to the constructor of its parent class vehicles
 
         super(length, breadth, height);
@@ -113,11 +160,8 @@ class Boeing747 extends Vehicles {
     }
 
     /**
-     * 
      * function that returns the plane details
      * will be able to access its parents properties using javascript inheritance and 'super' keyword
-     * 
-     * 
      */
     stateDetails() {
 
