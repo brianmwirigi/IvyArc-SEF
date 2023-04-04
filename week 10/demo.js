@@ -167,7 +167,31 @@ class Boeing747 extends Vehicles {
 
         return "the Boeing747 has the folling properties:" + "length - " + this.length + " " + "breadth - " + this.breadth + " " + "height - " + this.height + " " + "brand - " + this.brand + " " + "model - " + this.model + " " + "passenger Count - " + this.passengerCount;
     }
+
+    //class and objects both have getters ans setter
+    //get is used ti get properties
+    get getmodel() {
+        return this.model;
+    }
+    //set is used to set new properties and and is a function
+    set setBrand(item) {
+        this.brand = item;
+
+    }
 }
-let boeing747 = new Boeing747(76, 25, 64, 19.8, "boeing", 747, 600)
+let boeing747 = new Boeing747(76, 25, 64, 'boeing747', "boeing", 747, 600)
 console.log(boeing747);
 console.log(boeing747.stateDetails());
+console.log(boeing747.getmodel);
+
+boeing747.setBrand = 'boeing757';
+console.log(boeing747);
+
+//javascript set
+// set have additional functionality and does not allow duplication of values such as ID numbers
+//introduced in 2015 ECMAscript6
+//set is a javascript object that stores items
+//sets can be created using oclasses and objects
+//set classes are used to create objects. the objects alow various actions to porform on the stored item via prebuilt functions
+//when accessing the value of a set, one gets an iterable object (object that contain a list of items)
+//individual values of the iterable object are accessed using a variaion of a for loop called the for...of loop
