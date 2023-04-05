@@ -225,6 +225,18 @@ console.log(fruitSet);
 //enables display of all valus inside the set
 let fruitSetItems = fruitSet.values();
 
+
+console.log(fruitSetItems); //creates an iterable object
+
+//forEach() method lop is used to perforn on each value in a set
+let x = " ";
+fruitSet.forEach(value => {
+    return x += value;
+})
+
+console.log(x);
+
+
 //create message to be displayed after being appended with the set values
 //the size property of the fruitSet object that loads a value that represents the length (how many items are in it) of a set
 let setMessage = "here is a set a work.its size (length) is - " + fruitSet.size + " and its initial values are - ";
@@ -238,6 +250,7 @@ console.log(setMessage + "(notice the lack of duplicates)");
 //delete set values
 {
     fruitSet.delete("oranges");
+    console.log(fruitSet.delete("oranges"));//returns a boolean false beasue the object is removed in previous line
     let fruitSetItems2 = fruitSet.values();
     let setMessage2 = "we removed an item in the set. its new size is - " + fruitSet.size + " and its current values are - "
 
