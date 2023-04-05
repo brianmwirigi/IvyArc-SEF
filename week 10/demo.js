@@ -190,8 +190,74 @@ console.log(boeing747);
 //javascript set
 // set have additional functionality and does not allow duplication of values such as ID numbers
 //introduced in 2015 ECMAscript6
-//set is a javascript object that stores items
-//sets can be created using oclasses and objects
+//set is a javascript object that stores unique items
+//stores key value pairs
+//sets can be created using classes and objects
 //set classes are used to create objects. the objects alow various actions to porform on the stored item via prebuilt functions
 //when accessing the value of a set, one gets an iterable object (object that contain a list of items)
 //individual values of the iterable object are accessed using a variaion of a for loop called the for...of loop
+
+//an array of fruits
+let fruitArray = ["apple", "banana", "guava", "oranges"];
+let arrayMessage = "here we see an array at work -";
+
+//counter variable
+let count = 0;
+
+///while loop to get the values of an array
+while (count < fruitArray.length) {
+    arrayMessage += " " + fruitArray[count] + " " + count++;
+}
+console.log(arrayMessage);
+
+//a set to hold fruits using set classes (created using an object
+//(new) and (set) keyword must be used   
+//passed to an array and must have unique values
+let fruitSet = new Set(["apple", "banana", "oranges"]);
+console.log(fruitSet);
+
+// sets object prebuilt function -add() method
+fruitSet.add("pineaples", "apples");
+fruitSet.add("oranges");
+
+console.log(fruitSet);
+//the value() function creates the iterable object from the fruitset set
+//enables display of all valus inside the set
+let fruitSetItems = fruitSet.values();
+
+//create message to be displayed after being appended with the set values
+//the size property of the fruitSet object that loads a value that represents the length (how many items are in it) of a set
+let setMessage = "here is a set a work.its size (length) is - " + fruitSet.size + " and its initial values are - ";
+
+//in the iteration of the loop, the fruitSetIems will hold an item from the iteration object. when iteration finishes, the next item in the set will be fruitsetItems new value
+for (const fruitSetItem of fruitSetItems) {
+    setMessage += " " + fruitSetItem + " ";
+}
+console.log(setMessage + "(notice the lack of duplicates)");
+
+//delete set values
+{
+    fruitSet.delete("oranges");
+    let fruitSetItems2 = fruitSet.values();
+    let setMessage2 = "we removed an item in the set. its new size is - " + fruitSet.size + " and its current values are - "
+
+    for (const fruitSetItem2 of fruitSetItems2) {
+        setMessage2 += " " + fruitSetItem2;
+    }
+    console.log(setMessage2 += " (a fruit has been removed)")
+}
+
+//clearing the set of all its values
+{
+    fruitSet.clear();
+    let fruitSetItems3 = fruitSet.values();
+    let setMessage3 = "we cleared the set. its new size is " + fruitSet.size + " and its new values are - ";
+
+    for (const fruitSetItem3 of fruitSetItems3) {
+        setMessage3 += " " + fruitSetItem3;
+    }
+
+    console.log(setMessage3 += "(set is empty)")
+
+
+}
