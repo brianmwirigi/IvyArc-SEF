@@ -241,7 +241,7 @@ console.log(x);
 //the size property of the fruitSet object that loads a value that represents the length (how many items are in it) of a set
 let setMessage = "here is a set a work.its size (length) is - " + fruitSet.size + " and its initial values are - ";
 
-//in the iteration of the loop, the fruitSetIems will hold an item from the iteration object. when iteration finishes, the next item in the set will be fruitsetItems new value
+//in the iteration of the foor loop, the fruitSetIems will hold an item from the iteration object. when iteration finishes, the next item in the set will be fruitsetItems new value
 for (const fruitSetItem of fruitSetItems) {
     setMessage += " " + fruitSetItem + " ";
 }
@@ -274,3 +274,24 @@ console.log(setMessage + "(notice the lack of duplicates)");
 
 
 }
+
+//set can be used to perfrom actions on arrays
+const newArr = [1, 2, 2, 3, 4, 5, 6, 6, 7, 8, 9] //contains duplicate values
+
+console.log(newArr);
+
+//create array using set with no duplicacy ()...)is a spread operator
+const noDuplicateArray = [...new Set(newArr)];
+console.log(noDuplicateArray);
+
+//use sets to remove duplicacy in array
+const nonDuplicateArr = new Set(newArr);
+console.log(nonDuplicateArr);
+
+//remove duplicate values in an array of string
+const string = 'mwirigi';
+
+const set = new Set(string); //creation of set with no duplicacy
+console.log(set);
+console.log(set.size);
+
