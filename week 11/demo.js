@@ -68,7 +68,7 @@ functionA(5, 6, print);
  * methods called finally() can be added that functions like the (default) condition in switch-case statement i.e it will act regardless if promise is fullfilled or rejected
  * difference between default statement fromt switch-case statement is the default functions as the only set of action  that will be prefromed when all other fail in other words only one block of code is run when a condition is fullfilled
  * while the finally() will run along with either then() or catch() function in other words two blocks of code will be executed
- * use of multiple then() functions, we pass the feedback we receive from the promise from the first to the next
+ * use of multiple then() functions, we pass the feedback we receive from the promise from the first to the next. done through the (return) keyword
  * 
  * 
  */
