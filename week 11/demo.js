@@ -43,7 +43,7 @@ functionA(5, 6, print);
  * aynchronous programming has two concepts - promises and await and aync key words
  */
 /**
- * async - promises (cathces the error) works with the "then" keyword
+ * async - promises (cathes the error) works with the "then" keyword
  * a promise is a javascript object(created from the pre-built promise class) that is utilized in asynchronous progrmming
  * its a tester that checks if an asynchronous (parallel) operation has succeeded or failed and runs specified code depending on the success/failure of the operation
  * its similar to an IF/ELSE statement (albeit an advanced one) that checks if an async operation is successful/fails, running different chunks of code upon the result
@@ -69,6 +69,20 @@ functionA(5, 6, print);
  * difference between default statement fromt switch-case statement is the default functions as the only set of action  that will be prefromed when all other fail in other words only one block of code is run when a condition is fullfilled
  * while the finally() will run along with either then() or catch() function in other words two blocks of code will be executed
  * use of multiple then() functions, we pass the feedback we receive from the promise from the first to the next. done through the (return) keyword
- * 
+ * ayncawait before function and tell the program that its a promise
  * 
  */
+function promiseCode(resolve, reject) {
+    let test = 5;
+    if (test < 5) {
+        /**
+         * resolve() function is passed as an argument will
+         * be thee feedback ("return value") of promise if its operation
+         * is fulfilled(true)
+         */
+        resolve("value is less than 10");
+    }
+    else {
+
+    }
+}
