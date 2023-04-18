@@ -74,7 +74,7 @@ functionA(5, 6, print);
  */
 function promiseCode(resolve, reject) {
     let test = 5;
-    if (test < 5) {
+    if (test < 10) {
         /**
          * resolve() function is passed as an argument will
          * be thee feedback ("return value") of promise if its operation
@@ -83,6 +83,27 @@ function promiseCode(resolve, reject) {
         resolve("value is less than 10");
     }
     else {
+        /**
+         * reject() function is passed as an argument and the feedback ("return value")
+         * of promise if its operations fails (false)
+         */
+        reject("Value is greater than 10")
 
     }
 }
+
+let newPromise = new Promise(promiseCode);
+
+newPromise.then(
+    /**
+     * function created without a name and still runs
+     * it uses the 'resolve' from the promiseCode callback function
+     * when the promise was made
+     * the 'value' parameter will receive the feedback from the promise as its arguments
+     */
+
+    function (value1) { console.log(value1 + "(first then() function)"); return value1; })
+
+
+
+    .then()
