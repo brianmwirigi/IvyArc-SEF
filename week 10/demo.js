@@ -198,8 +198,11 @@ console.log(boeing747);
 //individual values of the iterable object are accessed using a variaion of a for loop called the for...of loop
 
 //an array of fruits
-let fruitArray = ["apple", "banana", "guava", "oranges"];
+let fruitArray = ["apple", "pinapple", "banana", "guava", "oranges"];
 let arrayMessage = "here we see an array at work -";
+
+fruitArray.push("oranges");
+fruitArray.push("pineapple");
 
 //counter variable
 let count = 0;
@@ -219,6 +222,8 @@ console.log(fruitSet);
 // sets object prebuilt function -add() method
 fruitSet.add("pineaples", "apples");
 fruitSet.add("oranges");
+fruitSet.add("pears");
+fruitSet.add("pears");
 
 console.log(fruitSet);
 //the value() function creates the iterable object from the fruitset set

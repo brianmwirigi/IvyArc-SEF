@@ -33,9 +33,9 @@ console.log(x);
 /**
  * the art of raising or lifting somethin
  * ability to use variables before being defined
- * only workd with the var keyword
+ * only word with the var keyword
  * outputs error if let and const are used when calling varing before declared
- * only workd for declaration and not initialization
+ * only word for declaration and not initialization
  * 
  * 
  * 

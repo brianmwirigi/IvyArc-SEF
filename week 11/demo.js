@@ -102,8 +102,12 @@ newPromise.then(
      * the 'value' parameter will receive the feedback from the promise as its arguments
      */
 
-    function (value1) { console.log(value1 + "(first then() function)"); return value1; })
+    function (value1) { console.log(value1 + " (first then() function)"); return value1; })
+
+    /**
+     * stacking multiple "then" functions to perform a series of actions that will occur aynchronously (at the same time) if promise is fullfulled
+     * here, "value2" represents the feedback from the first then() function, ie the argument for the "value1" parameter
+     */
 
 
-
-    .then()
+    .then(function (value2) { console.log(value2 + " (second then() function)") })
