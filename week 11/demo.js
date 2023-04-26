@@ -40,7 +40,7 @@ functionA(5, 6, print);
  * Javascript, the execution of function is done separately i.e executed one after another
  * functionA defined before functionB. if functionB is called before functionA, functionA will be the second to be processed by the system - called synchronous programming....one after the other in a queue (single thread programming language)
  * downloading and still using the website -asynchronous programming that enable multiple functions to run in parallel (run simultaneously- multiple thread, multitasking)
- * aynchronous programming has two concepts - promises and await and aync key words
+ * aynchronous programming has two concepts - promises and await and async keywords
  */
 /**
  * async - promises (cathes the error) works with the "then" keyword
@@ -66,13 +66,14 @@ functionA(5, 6, print);
  * if promise is fulfilled, one can stack multiple then() function to have numerous actions performed in parallel
  * only one cath() fuction for promise
  * methods called finally() can be added that functions like the (default) condition in switch-case statement i.e it will act regardless if promise is fullfilled or rejected
- * difference between default statement fromt switch-case statement is the default functions as the only set of action  that will be prefromed when all other fail in other words only one block of code is run when a condition is fullfilled
+ * difference between default statement fromt switch-case statement is the default functions as the only set of action  that will be performed when all other fail in other words only one block of code is run when a condition is fullfilled
  * while the finally() will run along with either then() or catch() function in other words two blocks of code will be executed
  * use of multiple then() functions, we pass the feedback we receive from the promise from the first to the next. done through the (return) keyword
- * ayncawait before function and tell the program that its a promise
+ * aync & await before function and tell the program that its a promise
  * 
  */
-function promiseCode(resolve, reject) {
+//FULFILLED
+function fulfilledCode(resolve, reject) {
     let test = 5;
     if (test < 10) {
         /**
@@ -92,9 +93,9 @@ function promiseCode(resolve, reject) {
     }
 }
 
-let newPromise = new Promise(promiseCode);
+let newfulfilled = new Promise(fulfilledCode);
 
-newPromise.then(
+newfulfilled.then(
     /**
      * function created without a name and still runs
      * it uses the 'resolve' from the promiseCode callback function
@@ -111,3 +112,94 @@ newPromise.then(
 
 
     .then(function (value2) { console.log(value2 + " (second then() function)") })
+    /*h*
+     * below shows that a then() function in a chain must not use the feedback from the previous then() function but can perform a different task asynchronously
+     *
+     */
+    .then(function () { console.log("(third then() function)") })
+
+    //handle the "rejected" feedback from the promise
+    .catch(function (error1) { console.log(error1 + " (first catch() function)") })
+    //after error is caught, finally is used
+    .finally(function () { console.log("And, were done with the promise! (first Final() function)") })
+
+//REJECTED
+function rejectedCode(resolve, reject) {
+    let test = 15;
+    if (test < 10) {
+        /**
+         * resolve() function is passed as an argument and will be feedback ("return value") of the promise if its operation is fullfilled (true)
+         */
+        resolve("value is less than 10");
+    }
+    else {
+        /**
+         * reject() function is passed as an argument and will be feedback ("return value") of promise if its operation fails (false)
+         */
+        reject("value is greater than 10");
+    }
+}
+let newRejected = new Promise(rejectedCode);
+
+
+/**
+ * function created without a name that stills run
+ * it uses the "resolve" from the rejectedCode callback function when the promise was made
+ * the "value" parameter will receive the feedback from the promise as its arguments
+ */
+newRejected.then(function (value1) { console.log(value1 + " (first then() function)"); return value1; })
+
+    /**
+     * stacking multiple "then" functions to perform a series of actions that will occur asynchronously (at the same time) if the promise is fullfilled
+     * here "value2" will represent the feedback from the first then() function i.e. the arguments for the "value1" parameter
+     */
+    .then(function (value2) { console.log(value2 + " (second then() function"); })
+
+
+    /**
+     * a then() function in a chain must not use the feedack from the previous then() function but can perfrom a different task asnchronously
+     */
+    .then(function () { console.log("(third then() function)"); })
+
+    //handles the 'rejected feedack from the promise'
+    .catch(function (error2) { console.log(error2 + " (first catch() function"); })
+    .finally(function () { console.log("and, were done with the promise! (first finally() function)"); })
+
+/**
+ * asnyc and await keywords work hand-in-hand to turn normal basic functions into asnchronous (with the aid of promises within the function)
+ * async keyword turns a function into a promise, running asnychronously
+ * similar to adding promise-like features to javascript function i.e. grafting promise functionality unto regular javascript function. enabling it to run witht then() and catch() method. like typical promise
+ * await keyword tells function to hold on and wait for promise to be resolved before rest of function finishes its executions
+ * example is where we have asynhronous code in which one part relies on the result(output) of another part. await keyword makes all other parts of the code wait for output before it can continue its activity
+ * it is only usable within a function that has been made asynchronous via async keyword
+ * await and async keyword do not invalidate the use of promises but just an additional way of applying them and cleaning up the the process to prevent unecessary stacking of promises
+ * also be aware it is the combination of both of these keywords that turn functions into asynchronous
+ */
+
+//await
+async function calculate(arga, argb) {
+    let multiplier = arga * argb;
+    let squareMaker = multiplier * multiplier;
+
+
+    /**
+     * below we create a callback function as the arguments of a new promise object
+     * first function represents the "resolved" argument and will perform actions
+     * the initial "resolve" argument is passed to the callback function as its arguments
+     * the second function represents the "reject" argument passing on the argument from the promise object creation syntax.
+     * this will be the feedback of the promise if an error occurs in the processing
+     */
+    let calculator1 = new Promise(function (resolve) {
+        resolve("the square of the multiplication of two arguments which are " + arga + " and " + argb + " is " + squareMaker);
+    },
+        function (reject) {
+            reject("ran into an error");
+        });
+    //this will print the feedback (return) of the promise object that is stored in the "print" variable that is declared above
+    //here we use the "no await" keyword
+
+    console.log(await calculator1);
+}
+calculate(4, 10);
+
+//if no await is used, a promise object is created
