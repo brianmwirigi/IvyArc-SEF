@@ -44,6 +44,14 @@ function method(x, y, callback) {
     return callback(x, y);
 }
 console.log(method(14, 15, addNumber));
+
+
+//inbuilt javascript function that has a timer
+setTimeout(functionB, 2000);
+function functionB() {
+    console.log("this is a new day")
+}
+
 //sychronous and asynchronous
 /**
  * Javascript, the execution of function is done separately i.e executed one after another
@@ -81,6 +89,19 @@ console.log(method(14, 15, addNumber));
  * aync & await before function and tell the program that its a promise
  * 
  */
+let promise1 = new Promise((resolve, reject) => {
+    let x = 8;
+    if (x < 4) {
+        resolve(true)
+    } else {
+        reject(false)
+    }
+})
+
+promise1.then((value) => { console.log(value) })
+    .catch((error) => { console.log(error) })
+
+
 //FULFILLED
 function fulfilledCode(resolve, reject) {
     let test = 5;
@@ -185,6 +206,17 @@ newRejected.then(function (value1) { console.log(value1 + " (first then() functi
  * also be aware it is the combination of both of these keywords that turn functions into asynchronous
  */
 
+const newFunction = async () => {
+    const functionD = (x, y) => {
+        return x % y;
+    }
+    return "Hello World"
+
+}
+
+newFunction().then((value) => { console.log(value) })
+    .catch((error) => { console.log(error) })
+    .finally(() => { console.log("exit") })
 //await
 async function calculate(arga, argb) {
     let multiplier = arga * argb;
