@@ -35,6 +35,15 @@ function print(argument1, argument2) {
  */
 functionA(5, 6, print);
 
+//normal function
+function addNumber(a, b) {
+    return ("the sum is " + (a + b));
+}
+//callback function
+function method(x, y, callback) {
+    return callback(x, y);
+}
+console.log(method(14, 15, addNumber));
 //sychronous and asynchronous
 /**
  * Javascript, the execution of function is done separately i.e executed one after another
