@@ -244,3 +244,71 @@ async function calculate(arga, argb) {
 calculate(4, 10);
 
 //if no await is used, a promise object is created
+
+/**HTML DOM - document object model
+ * (HTML) DOM elements, methods, CSS, events
+ * DOM is a representation of webpage that uses object to represent strucutre of a webpage with parent and child relationship
+ * each object(element) in the DOM will have properties(attributes) and methods that can be accessed to dynamically interact with webpage such as how attributes of an element are represented as as the properties in the corresponding objects
+ * NOTE each object including whitespaces and comments in the DOM is called a node
+ * a node is a representation of a point in a network that is interconnected to other points in a network/ a node is a point in a network or diagram at which a line or pathway intersects or branch
+ * manipulation of the DOM using the property "innerHTML". a property given to most objects (elements) in the typical DOM webpage. represents the actual content of the object and is manipulated using a function called - document,getelementbyID([element_ID]),innerHTML
+ * javascript DOM refers to how we can use javascript to access and edit the HTML DOM dynamically
+ * when referring to "document" we are working with DOM, HTML page as seen in the DOM. its the sum total of all objects(node) of HTML webpage
+ * 
+ * javascript DOM - elements and methods
+ * How to target HTML Elements (DOM objects) using specific methods
+ * such method include - getElementById([Element_ID])
+ * setAttribute() - used to dynamically set attributes of an element. each element has attributes that can be edited like properties in traditional javascript OOP
+ * getAttribute() - inverse of the setAttribute() i.e it returns the value of a specified attribute that has been already set
+ * getElementByTagName() is a method used to get references to all the elements in a webpage that have a specific tag name. returns a collection of elements one can access like an array(using loops, counters)
+ * */
+
+document.getElementById("cute_cat").setAttribute("width", "500px");
+document.getElementById("cute_cat").setAttribute("height", "500px");
+document.getElementById("cute_cat").setAttribute("alt", "a fat cute cat");
+
+//store reference to the picture in a variable 
+let cuteCat = document.getElementById("cute_cat");
+
+//sets attribute for the cat photo
+{
+    cuteCat.setAttribute("width", "400px");
+    cuteCat.setAttribute("height", "400px");
+    cuteCat.setAttribute("alt", "A fat orange cat");
+}
+
+/**store the id of the cat picture into a variable using the getAttribute() method */
+let cuteCadID = cuteCat.getAttribute("id");
+
+cat_text.innerHTML += "'" + cuteCadID + "'";
+
+//getElementByTagName is used mostly when fetching data and printing it out
+let finalDivRef = document.getElementById("final_div");
+
+//get all references to elements whose name are div
+let allDivs = document.getElementsByTagName("div");
+
+let count;
+//&lt; - less than sign
+//&gt; - greater than sign
+//print out id attribute of all div tags
+for (count = 0; count < allDivs.length; count++) {
+    finalDivRef.innerHTML += "&nbsp;" + allDivs[count].getAttribute("id");
+}
+
+//javascript DOM - CSS
+/**
+ * object properties representing the css property will share the same name as them but will follow the typical property naming convention i.e. camelCase
+ */
+let count1;
+let allDivs1 = document.getElementsByTagName("div");
+
+for (count1 = 0; count1 < allDivs1.length; count1++) {
+    //appling styling to all elements that have "div" as their tag name
+    allDivs1[count1].style.borderBlock = "purple";
+    allDivs1[count1].style.borderStyle = "double";
+    allDivs1[count1].style.borderWidth = "5px";
+    allDivs1[count1].style.borderRadius = "15px";
+    allDivs1[count1].style.width = "fit-content";
+    allDivs[count1].style.padding = "5px";
+}
