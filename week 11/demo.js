@@ -312,3 +312,8 @@ for (count1 = 0; count1 < allDivs1.length; count1++) {
     allDivs1[count1].style.width = "fit-content";
     allDivs[count1].style.padding = "5px";
 }
+
+//javascript DOM events
+/**
+ * 
+ */
