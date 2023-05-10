@@ -423,3 +423,11 @@ coding_video.addEventListener("pause", nowPaused);
 function nowPaused() {
     video_title.innerHTML = 'Now paused - ' + coding_video.getAttribute("title");
 }
+
+
+//mouseover and mouseout - straightforward set of event listeners
+/**
+ * they listen for when a selected object has the mouse over it and when the mouse is nolonger over it
+ * similar to :hover pseudo-class in css class
+ */
+
