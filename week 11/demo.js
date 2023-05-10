@@ -315,5 +315,88 @@ for (count1 = 0; count1 < allDivs1.length; count1++) {
 
 //javascript DOM events
 /**
- * 
+ * when interacting with webpages actions occur called events
+ * things happen such as clicking a button, opening the page, typing som etext, fosung on a text field, hovering over a picture
+ * with events (and javascript DOM), actions can be defined that will occur when an event triggers(occurs) through adding a specific type of method called an event listener that watches the webpage "listening" to the webpage for events that have been triggered. for each type of event its listened to (for each element), one needs a unique listener to it
+ * a specific chunk of code (placed in a function) will run when event occurs. the code is called an event handler as it handles what should happen when an event occurs
+ * onclick attribute of button element is used to listen. its a prebuilt event listener that is bult for the <button> tag with the code that is an event handler
+ * event listeners and handlers, how they work with the HTML DOM and how they can influence the elements on the page
+ * different elements have different actions that occur on them i.e. they throw different events, and there are prebuilt event listeners that only work on some elements/events
+ * event listeners can be added to HTML elements by adding them as attributes to the element with values being the chunk of code or function that will handle them
+ * unsing the addEventListener() method via javascript file that takes two arguments. first argument being the name of the event listener(from a list of prebuilt ones). second argument is a chunk of code or the function that will serve as the event handler. doing something when event occurs
+ * adding events listener either as an attribute or via the addEventListener() method are both similar processes. only difference is naming the event listener
+ * calling event listener that will activate when a user clicks on a button. doing it as an atrtribute will require to be named as onclick=[event_handler] while  via addEventListener() method it will be addEventListener("click", [event_handler])
+ * event, event listeners and event handlers
  */
+/**
+ * onload - when openin a webpage, it is loaded to browser memory. the onload event listener ill determine what happens when a webpage is loaded into the browser memory either by being loaded freshly from its source or being refreshed after it has been loaded. used with body tag of webpage. guaging when it has loaded inot the browser memory
+ */
+let body = document.getElementById("body");
+//handles what happens when the body element (representing the webpage overall) has been loaded in
+{
+    /**
+     * add an event listener to listen for when the page loads i.e. it listens to the page-loading event
+     */
+    body.addEventListener("load", whenLoaded());
+    /**
+     * event handler that is called when th page loads i.e the code will run when the page loader event occurs
+     * 
+     */
+    function whenLoaded() {
+
+        /**
+         * the setTimeOut() function tells browser to wait for a specified amount of milliseconds (second argument) before it perfroms an action specified via a callback function (first argument)
+         * 
+         */
+        setTimeout(howLongAgo, 5000);
+        setTimeout(welcome, 7000)
+    }
+    //print the time since the body element was loaded
+    function howLongAgo() {
+        document.getElementById("load").innerHTML += 'youre page loaded 5 second ago, right?'
+    }
+    function welcome() {
+        //store the title of the page
+        let title = document.getElementById('title').innerHTML;
+        document.getElementById("load").innerHTML += "thank you for visiting this page - " + title;
+    }
+}
+//click event - trigged when an element is clicked
+//store a reference to a div element that has the id of = 'changing_div'
+let changinDiv = document.getElementById("changing_div");
+
+//set the properties of changing_div div element
+{
+    changinDiv.style.border = 'solid';
+    changinDiv.style.borderWidth = '5px';
+    changinDiv.style.width = '500px';
+    changinDiv.style.height = '300px';
+    changinDiv.style.borderColor = 'black';
+}
+
+//store reference to the button
+let purple_border_button = document.getElementById("purple_border");
+let blue_border_button = document.getElementById("blue_border");
+let light_green_border_button = document.getElementById("lightgreen_border");
+
+//add event listener to the button that turns the border purple
+purple_border_button.addEventListener("click", changeToPurple);
+function changeToPurple() {
+    changinDiv.style.borderColor = 'purple';
+    changinDiv.innerHTML = 'border color is now purple';
+}
+
+//add event listener to the button that turns the border blue
+blue_border_button.addEventListener("click", changeToBlue);
+function changeToBlue() {
+    changinDiv.style.borderColor = 'blue';
+    changinDiv.innerHTML = 'border color is now blue';
+}
+
+//add event listener to the button that turns the border lightgreen
+light_green_border_button.addEventListener("click", changeToLightGreen);
+function changeToLightGreen() {
+    changinDiv.style.borderColor = "lightgreen";
+    changinDiv.innerHTML = 'border color is now lightgreen';
+}
+//play, pause and playing - these event listeners work with media files on webpage
