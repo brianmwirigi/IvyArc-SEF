@@ -400,3 +400,26 @@ function changeToLightGreen() {
     changinDiv.innerHTML = 'border color is now lightgreen';
 }
 //play, pause and playing - these event listeners work with media files on webpage
+/**
+ * play event listener listens when a media starts playing for the first time
+ * pause event listener listens for when the media pauses 
+ * playing event listener listens for when media starts playing again after being paused for the first time
+ * 
+ */
+
+let containerDiv = document.getElementById("playing_and_pause");
+containerDiv.style.marginLeft = "50px";
+containerDiv.style.textAlign = 'center';
+
+let coding_video = document.getElementById("coding_video");
+let video_title = document.getElementById("video_title");
+
+coding_video.addEventListener("playing", playingAgain);
+function playingAgain() {
+    video_title.innerHTML = 'now playing - ' + coding_video.getAttribute("title");
+}
+
+coding_video.addEventListener("pause", nowPaused);
+function nowPaused() {
+    video_title.innerHTML = 'Now paused - ' + coding_video.getAttribute("title");
+}
