@@ -430,4 +430,27 @@ function nowPaused() {
  * they listen for when a selected object has the mouse over it and when the mouse is nolonger over it
  * similar to :hover pseudo-class in css class
  */
+let catContainer = document.getElementById("cat_container");
+catContainer.style.textAlign = 'center';
 
+let cuteCat1 = document.getElementById("cute_cat");
+cuteCat1.setAttribute("width", '400px');
+cuteCat1.setAttribute("height", '400px');
+cuteCat1.setAttribute("alt", "A Cute orange Cat");
+cuteCat1.style.borderRadius = '50%';
+
+//define what happens when the mouse moves over the image
+cuteCat1.addEventListener("mouseover", hoveringMouse)
+function hoveringMouse() {
+    cuteCat1.style.borderColor = "orange";
+    cuteCat1.style.borderStyle = "solid";
+    cuteCat1.style.borderWidth = '15px';
+}
+
+//define what happens when the mouse moves away from the image
+cuteCat1.addEventListener("mouseleave", leavingMouse);
+function leavingMouse() {
+    cuteCat1.style.borderColor = '';
+    cuteCat1.style.borderStyle = '';
+    cuteCat1.style.borderWidth = '';
+}
