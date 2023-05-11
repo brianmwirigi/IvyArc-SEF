@@ -266,6 +266,7 @@ calculate(4, 10);
 document.getElementById("cute_cat").setAttribute("width", "500px");
 document.getElementById("cute_cat").setAttribute("height", "500px");
 document.getElementById("cute_cat").setAttribute("alt", "a fat cute cat");
+document.getElementById("cute_cat").innerHTML = 'loading';
 
 //store reference to the picture in a variable 
 let cuteCat = document.getElementById("cute_cat");
