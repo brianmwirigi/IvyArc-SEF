@@ -261,12 +261,31 @@ calculate(4, 10);
  * setAttribute() - used to dynamically set attributes of an element. each element has attributes that can be edited like properties in traditional javascript OOP
  * getAttribute() - inverse of the setAttribute() i.e it returns the value of a specified attribute that has been already set
  * getElementByTagName() is a method used to get references to all the elements in a webpage that have a specific tag name. returns a collection of elements one can access like an array(using loops, counters)
- * */
+ * getElementByClassName()
+ *  */
 
+//find html elements
 document.getElementById("cute_cat").setAttribute("width", "500px");
 document.getElementById("cute_cat").setAttribute("height", "500px");
 document.getElementById("cute_cat").setAttribute("alt", "a fat cute cat");
 document.getElementById("cute_cat").innerHTML = 'loading';
+
+const borderColor1 = document.getElementsByTagName("p")
+borderColor1.innerHTML = "God is Good"
+borderColor1.style.color = "red";
+console.log(borderColor1);
+console.log(borderColor1[0]);
+borderColor1[0].style.color = "green";
+
+for (item in borderColor1) {
+    console.log(item)
+    item.style.color = "yellow";
+}
+
+for (index = 0; index < borderColor1.length; index++) {
+    borderColor1[index].style.color = "blue";
+}
+
 
 //store reference to the picture in a variable 
 let cuteCat = document.getElementById("cute_cat");
@@ -279,13 +298,14 @@ let cuteCat = document.getElementById("cute_cat");
 }
 
 /**store the id of the cat picture into a variable using the getAttribute() method */
-let cuteCadID = cuteCat.getAttribute("id");
+let cuteCatID = cuteCat.getAttribute("id");
 
-cat_text.innerHTML += "'" + cuteCadID + "'";
+cat_text.innerHTML += "'" + cuteCatID + "'";
 
-//getElementByTagName is used mostly when fetching data and printing it out
 let finalDivRef = document.getElementById("final_div");
 
+
+//getElementByTagName is used mostly when fetching data and printing it out
 //get all references to elements whose name are div
 let allDivs = document.getElementsByTagName("div");
 
@@ -311,7 +331,7 @@ for (count1 = 0; count1 < allDivs1.length; count1++) {
     allDivs1[count1].style.borderWidth = "5px";
     allDivs1[count1].style.borderRadius = "15px";
     allDivs1[count1].style.width = "fit-content";
-    allDivs[count1].style.padding = "5px";
+    allDivs1[count1].style.padding = "5px";
 }
 
 //javascript DOM events
