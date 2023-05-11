@@ -258,11 +258,12 @@ calculate(4, 10);
  * javascript DOM - elements and methods
  * How to target HTML Elements (DOM objects) using specific methods
  * such method include - getElementById([Element_ID])
- * setAttribute() - used to dynamically set attributes of an element. each element has attributes that can be edited like properties in traditional javascript OOP
- * getAttribute() - inverse of the setAttribute() i.e it returns the value of a specified attribute that has been already set
- * getElementByTagName() is a method used to get references to all the elements in a webpage that have a specific tag name. returns a collection of elements one can access like an array(using loops, counters)
- * getElementByClassName()
- *  */
+ * document.setAttribute() - used to dynamically set attributes of an element. each element has attributes that can be edited like properties in traditional javascript OOP
+ * document.getAttribute() - inverse of the setAttribute() i.e it returns the value of a specified attribute that has been already set
+ * document.getElementByTagName() is a method used to get references to all the elements in a webpage that have a specific tag name. returns a collection of elements one can access like an array(using loops, counters)
+ * document.getElementByClassName()
+ * document.querySelelctorAll(selelctor)
+ * */
 
 //find html elements
 document.getElementById("cute_cat").setAttribute("width", "500px");
@@ -289,10 +290,10 @@ for (index = 0; index < borderColor1.length; index++) {
 
 //store reference to the picture in a variable 
 let cuteCat = document.getElementById("cute_cat");
-
+console.log(cuteCat)
 //sets attribute for the cat photo
 {
-    cuteCat.setAttribute("width", "400px");
+    cuteCat[0].setAttribute("width", "400px");
     cuteCat.setAttribute("height", "400px");
     cuteCat.setAttribute("alt", "A fat orange cat");
 }
@@ -316,6 +317,28 @@ let count;
 for (count = 0; count < allDivs.length; count++) {
     finalDivRef.innerHTML += "&nbsp;" + allDivs[count].getAttribute("id");
 }
+//adding and deleting elements methods with arguments
+/**
+ * createElement(element)
+ * removeChild(element)
+ * appendChild(element)
+ * replaceChild(new, old)
+ * write(text)
+ */
+
+//querySelector
+let query1 = document.querySelectorAll("p#demo");
+console.log(query1);
+
+//adding elements
+const paragraph1 = document.createElement("p");
+paragraph1.innerText = "I LOVE GOD";
+paragraph1.innerHTML = 'Gods Grace Kepps me alive'
+document.body.appendChild(paragraph1); //adds to the bottom of line
+
+let div2 = document.getElementById("div2");
+console.log(div2);
+console.log(div2.appendChild(paragraph1));
 
 //javascript DOM - CSS
 /**
