@@ -26,6 +26,8 @@ let student = {
 }
 
 console.log(student);
+console.log(student["age"]);
+console.log(student.age);
 console.log(student.middleName);
 if (student.universityAdmission == true) {
     console.log("you are a registered student")
@@ -38,6 +40,23 @@ if (student.universityAdmission == true) {
 //JSON is used to interact with servers
 //servers send all their data as strings therefore preventing some javascript functions on some of its values,
 // to rememdy this, one convert JSON into a typical javascript object using a function called parse() which is the process of breaking something up into parts to make each part functional in its unique ways
+
+//array object from string
+const person = JSON.parse('{"employees":[{"name":"david","age":32},{"name":"john","age":33}]}');
+console.log(person)
+
+const companyInfo = {
+    emplyeee: [
+        { name: "david", age: 32 },
+        { name: "john", age: 33 }
+    ],
+}
+
+console.log(companyInfo.emplyeee[0])
+
+//Array object into JSON string
+const stringJson = JSON.stringify(companyInfo);
+console.log(stringJson);
 
 //JSON data sent by a server to a client
 const shape = '{"name":"rectangle","measurementUnit":"cm","length":"5","breadth":"15"}';
