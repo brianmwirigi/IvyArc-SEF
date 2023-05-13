@@ -17,7 +17,7 @@
             <subject02> English Language </subject02>
             <subject03> Science </subject03>
         </bestSubjects>
-    <student>
+    </student>
 
     <student>
         <first_name>Angela</first_name>
@@ -55,4 +55,4 @@
             <subject03>Mathematics</subject03>
         </bestSubjects>
     </student>
-</student>
+</students>

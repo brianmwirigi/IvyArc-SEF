@@ -81,7 +81,7 @@ if (typeof stringifiedTestObject === "string") {
 //XML is a markup language written using tags similar to HTML
 /**
  * main difference is that HTML, one uses pre-built tags that have specific effects on browser
- * n XML , one can create tags that can be used to strucutre data.
+ * in XML , one can create tags that can be used to strucutre data.
  * XML tags cant change color of browser but are a greate way of storing data and values can can inturn be used to transmit data across various clients that inturn can be used for various purposes such as changing the color of browser
  * when creating XML, one uses case-sensitive tags as elements and must have opening and closing tag of an xml element or as an attribute-value pair that is put in the openning tago of XML element(also works with self-closing tag)
  * one can also combine both of these methods by having the alue of the element be in-between the opeing and closing tag while also having attributes in the opeing tag that add more data about the element value
@@ -133,3 +133,15 @@ let student2 = [
  * XML uses user-defined tags to store and structure data while JSON uses name-value pairs of different data types
  * JSON data can be easily parsed into javascript objects whilst XML data is more cumbersome and require more PC overhead(resources) to perfrom
  */
+//react.js is a library used to create front end web application user interface
+//react native is used for mobile development (jsx)
+//restful API is used in node to connect to the database using JSON
+
+//JSON array
+const carModelArray = [
+    { "brand": "toyota", "series": "camry", "year": "2008" },
+    { "brand": "Mercedes", "series": "EClass", "year": "2015" },
+    { "brand": "land Rover", "series": "discovery", "year": "2010" }
+]
+
+console.log(typeof carModelArray)
