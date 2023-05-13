@@ -130,6 +130,6 @@ let student2 = [
  * JSON utilizes various data types such as string, number and array whilst XML file only comes in the string data type
  * JSON files are smaller than XML thus easier to store
  * JSON does not need to be an individual file for it to be used. JSON data can be part of an independent javascript file while XML data must be stored in an independent XML file
- * XML uses user-deinfed tags to store and strucutre data while JSON uses name-value pairs of different data types
- * JSON data can be easily parsed into javascript objects whilst XML data is more vumbersome and require more PC overhead(resources) to perfrom
+ * XML uses user-defined tags to store and structure data while JSON uses name-value pairs of different data types
+ * JSON data can be easily parsed into javascript objects whilst XML data is more cumbersome and require more PC overhead(resources) to perfrom
  */
