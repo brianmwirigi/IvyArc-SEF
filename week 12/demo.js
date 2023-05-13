@@ -77,3 +77,50 @@ if (typeof stringifiedTestObject === "string") {
 } else {
     console.log("this is an object")
 }
+
+//XML is a markup language written using tags similar to HTML
+/**
+ * main difference is that HTML, one uses pre-built tags that have specific effects on browser
+ * n XML , one can create tags that can be used to strucutre data.
+ * XML tags cant change color of browser but are a greate way of storing data and values can can inturn be used to transmit data across various clients that inturn can be used for various purposes such as changing the color of browser
+ * when creating XML, one uses case-sensitive tags as elements and must have opening and closing tag of an xml element or as an attribute-value pair that is put in the openning tago of XML element(also works with self-closing tag)
+ * one can also combine both of these methods by having the alue of the element be in-between the opeing and closing tag while also having attributes in the opeing tag that add more data about the element value
+ * NOTE: it is recommended to use non-attribute methods to store values to aid future editing and readability
+ * xml is tored in a unique document type called .xml
+ * below, we create an xml file that creates student profile 
+ */
+
+let student2 = [
+    {
+        "firstName": "Brian",
+        "middleName": null,
+        "lastName": "Mwirigi",
+        "phoneNumber": "(+234)079-024-9996",
+        "emailAdress": "bmmaingi17@gmail.com",
+        "city": "nairobi",
+        "areaCouncil": "langata",
+        "dob": "14-03-1996",
+        "age": 17,
+        "educationLevel": "Secondary School",
+        "graduationDate": "07-07-2022",
+        "universityAdmission": false,
+        "bestSubject": ["Mathematics", "english Language", "science"]
+    },
+
+    {
+        "first_name": "Angela",
+        "middle_name": "Therese",
+        "last_name": "Simpson",
+        "phone_number": "(+44) 517-678-9875",
+        "email_address": "angie'shome@yahoo.com",
+        "city": "Uxbridge",
+        "areaCouncil": "Middlesex",
+        "dob": "10-08-2000",
+        "age": 21,
+        "educationLevel": "Secondary School",
+        "graduationDate": "19-06-2020",
+        "universityAdmission": true,
+        "bestSubjects": ["English Language", "Science", "Government"]
+    },
+]
+

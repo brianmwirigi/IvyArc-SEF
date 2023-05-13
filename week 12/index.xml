@@ -1,0 +1,58 @@
+<students>
+    <student>
+        <firstName> brian </firstName>
+        <middleName> null </middleName>
+        <lastName> Maingi </lastName>
+        <phoneNumber> (+254) 079 024 996 </phoneNumber>
+        <emailAdress> bmmaingi17@gmail.com </emailAdress>
+        <city> nairobi</city>
+        <areaCouncil> langata </areaCouncil>
+        <dob>17-03-2006</dob>
+        <age> 17 </age>
+        <educationLevel> Secondary School </educationLevel>
+        <graduationDate> 07-07-2022 </graduationDate>
+        <universityAdmission> false</universityAdmission>
+        <bestSubjects>
+            <subject01>Mathematics</subject01>
+            <subject02> English Language </subject02>
+            <subject03> Science </subject03>
+        </bestSubjects>
+    <student>
+
+    <student>
+        <first_name>Angela</first_name>
+        <middle_name>Therese</middle_name>
+        <last_name>Simpson</last_name>
+        <phone_number>(+44) 517-678-9875</phone_number>
+        <email_address>angie'shome@yahoo.com</email_address>
+        <city>Uxbridge</city>
+        <areaCouncil>Middlesex</areaCouncil>
+        <dob>10-08-2000</dob>
+        <age>21</age>
+        <educationLevel>Secondary School</educationLevel>
+        <graduationDate>19-06-2020</graduationDate>
+        <universityAdmission>true</universityAdmission>
+        <bestSubjects>
+            <subject01>English Language</subject01>
+            <subject02>Science</subject02>
+            <subject03>Government</subject03>
+        </bestSubjects>
+    </student>
+
+    <student first_name="Timothy" middle_name="null" last_name="Thomas">
+        <phone_number>(+234) 761-877-9543</phone_number>
+        <email_address>timbo1.thomas@gmail.com</email_address>
+        <city>Abuja</city>
+        <areaCouncil>Kuje</areaCouncil>
+        <dob>09-07-2003</dob>
+        <age>19</age>
+        <educationLevel>Secondary School</educationLevel>
+        <graduationDate>03-06-2019</graduationDate>
+        <universityAdmission>true</universityAdmission>
+        <bestSubjects>
+            <subject01>Economics</subject01>
+            <subject02>Government</subject02>
+            <subject03>Mathematics</subject03>
+        </bestSubjects>
+    </student>
+</student>
